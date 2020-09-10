@@ -1,4 +1,6 @@
+# TextParser 1.2
+Combined the decimal and colon parsers
 # TextParser 1.1
 Added Colon Line Parser
 # Note
-Decimal Line displays a decimal result and Colon Line Parser returns an int result
+The output is determined by the amount of decimals or colons in the text.

@@ -5,33 +5,38 @@
 	<style>
 		body {
 			background-color: black;
+			text-align: center;
 		}
-		h1 {
-			color: lime;
-		}
-		h2 {
+		h1, h2 {
 			color: lime;
 		}
 		textarea {
-			background-color: lightgray;
+			background-color: black;
+			border-radius: 10px;
+			border-width: 5px;
+			color: lime;
+		}
+		textarea:focus, button:hover, button:focus {
+			border-color: lime;
 		}
 		button {
 			height: 100px;
 			width: 200px;
+			background-color: black;
+			border-radius: 10px;
+			border-width: 5px;
+			font-size: 1.5em;
+			color: lime;
 		}
 	</style>
 	<body>
-		<h1>Decimal Line Parser</h1>
-		<textarea id="textareaDec" rows="10" cols="50"></textarea>
-		<br/>
-		<br/>
-		<button id="button2" onclick="decimal();">ENTER</button>
-		<br/>
-		<br/>
-		<h1>Colon Line Parser</h1>
-		<textarea id="textareaCol" rows="10" cols="50"></textarea>
-		<br/>
-		<br/>
-		<button id="button2" onclick="colon();">ENTER</button>
+		<h1>Text Parser</h1>
+		<textarea id="theText" rows="20" cols="60"></textarea>
+		<br/><br/>
+		<button onclick="parse();"><b>PARSE</b></button>
+		&nbsp;
+		<button onclick="clearText();"><b>CLEAR TEXT</b></button>
+		<br/><br/>
+		<button onclick="clearResults();"><b>CLEAR RESULTS</b></button>
 	</body>
 </html>
