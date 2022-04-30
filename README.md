@@ -1,4 +1,8 @@
-# TextParser 1.2
-Combined the decimal and colon parsers
+# TextParser 1.3
+
+Rewritten in Angular
+Combined functionality of clear buttons
+
 # Note
+
 The output is determined by the amount of decimals or colons in the text.
