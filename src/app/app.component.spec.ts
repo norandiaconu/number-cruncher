@@ -4,6 +4,6 @@ import { AppComponent } from "./app.component";
 describe("AppComponent", () => {
     it("should do something", () => {
         const appComponent = new AppComponent();
-        expect(appComponent.title).toBe("TextParser");
+        expect(appComponent.title).toBe("TextParser1");
     });
 });
