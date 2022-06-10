@@ -29,8 +29,10 @@ jobs:
       - name: run jest
         run: npm run jest
       
-      - name: did the tests pass?
+      - name: tests passed
         if: ${{ success() }}
-        run: echo tests completed successfully
+        run: echo tests passed
+        
+      - name: tests failed
         if: ${{ failure() }}
         run: echo tests failed
