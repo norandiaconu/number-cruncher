@@ -1,4 +1,4 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component, ElementRef, ViewChild } from "@angular/core";
 
 @Component({
     selector: "app-root",
@@ -6,7 +6,7 @@ import { Component, ViewChild } from "@angular/core";
     styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-    @ViewChild("theText") theText: any;
+    @ViewChild("theText") theText!: ElementRef;
     title = "TextParser";
     total = 0.0;
 
@@ -22,7 +22,7 @@ export class AppComponent {
         const removeBeforeColon = /.*:/g;
         let totalMinutes = 0;
         let minutesToHours = 0;
-        if (minutesArray !== null) {
+        if (minutesArray) {
             minutesArray.forEach((minutes) => {
                 minutes = minutes.replace(removeBeforeColon, "");
                 totalMinutes = totalMinutes + parseInt(minutes);
@@ -48,7 +48,9 @@ export class AppComponent {
     }
 
     clearText() {
-        this.theText.nativeElement.value = "";
+        if (this.theText) {
+            this.theText.nativeElement.value = "";
+        }
         this.total = 0;
     }
 }

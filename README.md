@@ -1,4 +1,4 @@
-# TextParser 1.3
+# TextParser 1.3.2
 
 Rewritten in Angular
 Combined functionality of clear buttons
