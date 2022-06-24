@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "TextParser": {
+    "number-cruncher": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TextParser:build:production"
+              "browserTarget": "number-cruncher:build:production"
             },
             "development": {
-              "browserTarget": "TextParser:build:development"
+              "browserTarget": "number-cruncher:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,11 +83,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TextParser:build"
+            "browserTarget": "number-cruncher:build"
           }
         }
       }
     }
   },
-  "defaultProject": "TextParser"
+  "defaultProject": "number-cruncher"
 }

@@ -1,10 +1,10 @@
-# textparser
+# number-cruncher
 
-Calculate total time based on lines of input.
+Calculate total time based on lines of input with numbers on the end.
 
 ## Installation
 
-`npm install textparser`
+`npm install number-cruncher`
 
 ## Usage
 

@@ -7,7 +7,7 @@ import { Component, ElementRef, ViewChild } from "@angular/core";
 })
 export class AppComponent {
     @ViewChild("theText") theText!: ElementRef;
-    title = "TextParser";
+    title = "Number Cruncher";
     total = 0.0;
 
     parse(textInput: string) {

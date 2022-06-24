@@ -1,7 +1,7 @@
 {
-  "name": "text-parser",
+  "name": "number-cruncher",
   "author": "Noran Diaconu",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
@@ -14,7 +14,6 @@
     "android-init": "ng build && npx cap add android && cordova-res android --skip-config --copy && npx cap open android",
     "android-changes": "ng build && npx cap sync && cordova-res android --skip-config --copy"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.5",
     "@angular/common": "~13.3.5",

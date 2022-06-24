@@ -3,7 +3,7 @@ import { AppComponent } from "./app.component";
 describe("AppComponent", () => {
     it("should check the title", () => {
         const appComponent = new AppComponent();
-        expect(appComponent.title).toBe("TextParser");
+        expect(appComponent.title).toBe("Number Cruncher");
     });
 
     it("should check initial total", () => {
