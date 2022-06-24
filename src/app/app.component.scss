@@ -23,4 +23,9 @@ button {
     border-width: 5px;
     font-size: 1.5em;
     color: lime;
+    margin: 0 0.5em;
+
+    @media (orientation: portrait) {
+        margin: 0.5em 0;
+    }
 }

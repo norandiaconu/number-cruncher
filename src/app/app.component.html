@@ -1,8 +1,7 @@
 <h1>Text Parser</h1>
-<textarea rows="20" cols="60" #theText></textarea>
+<textarea rows="20" cols="50" #theText></textarea>
 <br /><br />
 <button (click)="parse(theText.value)"><b>PARSE</b></button>
-&nbsp;
 <button (click)="clearText()"><b>CLEAR</b></button>
 <br /><br />
 <h2>Total: {{ total | number: ".1-1" }}</h2>
