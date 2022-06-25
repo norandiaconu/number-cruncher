@@ -1,7 +1,10 @@
 {
   "name": "number-cruncher",
   "author": "Noran Diaconu",
-  "version": "1.4.0",
+  "version": "1.4.1",
+  "bin": {
+    "number-cruncher": "index.js"
+  },
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
