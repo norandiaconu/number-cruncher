@@ -4,12 +4,12 @@ Calculate total time based on lines of input with numbers on the end.
 
 ## Installation
 
-`npm install number-cruncher`
+`npm install number-cruncher -g`
 
 ## Usage
 
 - #### Open page
-  - npm start
+  - `number-cruncher`
 - ### Example lines of text to parse with periods
 
   TestOne 1.1\

@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 const { exec } = require("child_process");
-exec("npm run start");
+const command = "cd " + __dirname + " && npm run start";
+exec(command);
