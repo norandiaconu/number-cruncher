@@ -1,7 +1,12 @@
 <h1>Number Cruncher</h1>
-<textarea rows="20" cols="50" #theText></textarea>
-<br /><br />
+<textarea rows="10" cols="50" placeholder="{{ crunchPlaceholder }}" #theText></textarea>
+<br />
+<h2>Total: {{ total | number: ".1-1" }}</h2>
+<br />
 <button (click)="parse(theText.value)"><b>CRUNCH</b></button>
 <button (click)="clearText()"><b>CLEAR</b></button>
 <br /><br />
-<h2>Total: {{ total | number: ".1-1" }}</h2>
+<button (click)="loadInput(theUrl.value)"><b>LOAD URL</b></button>
+<button (click)="loadPrevious()"><b>LOAD PREV</b></button>
+<br /><br />
+<textarea rows="2" cols="40" placeholder="{{ urlPlaceholder }}" #theUrl></textarea><br />
