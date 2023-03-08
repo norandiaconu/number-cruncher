@@ -1,7 +1,7 @@
 {
   "name": "number-cruncher",
   "author": "Noran Diaconu",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "license": "MIT",
   "bin": {
     "number-cruncher": "index.js"
@@ -13,7 +13,8 @@
     "build": "ng build",
     "watch": "ng build & http-server ./docs",
     "lint": "ng lint",
-    "test": "jest --coverage",
+    "test": "ng test",
+    "jest": "jest --coverage",
     "electron": "electron .",
     "electron-build": "electron-builder -w",
     "android-init": "ng build && npx cap add android && cordova-res android --skip-config --copy && npx cap open android",
@@ -43,6 +44,7 @@
     "@angular/compiler-cli": "^14.2.12",
     "@capacitor/cli": "^3.6.0",
     "@capacitor/core": "^3.6.0",
+    "@types/jasmine": "^4.3.1",
     "@types/jest": "^28.1.3",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.43.0",
@@ -51,8 +53,12 @@
     "electron": "^22.1.0",
     "electron-builder": "^23.6.0",
     "eslint": "^8.28.0",
-    "jest": "^28.1.1",
+    "jest": "^29.5.0",
     "jest-preset-angular": "^12.2.2",
+    "karma": "^6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^5.1.0",
     "typescript": "~4.6.4"
   },
   "main": "main.ts",
