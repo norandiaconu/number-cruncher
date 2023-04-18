@@ -27,7 +27,7 @@ export class AppComponent {
         const initialRegex = /.* /g;
         let numbers = textInput.replace(initialRegex, "");
 
-        const removeColon = /:.*/g;
+        const removeColon = /:(?!\n).*/g;
         const minutesArray = numbers.match(removeColon);
         const removeBeforeColon = /.*:/g;
         let totalMinutes = 0;
@@ -46,11 +46,9 @@ export class AppComponent {
 
         const doublePlusRegex = /\+\+/g;
         let cleanedOperation = operation.replace(doublePlusRegex, "+");
-        const remainingWordsRegex = /[a-z]/g;
-        cleanedOperation = cleanedOperation.replace(remainingWordsRegex, "");
-        if (cleanedOperation.charAt(cleanedOperation.length - 1) === "+") {
-            cleanedOperation = cleanedOperation.slice(0, -1);
-        }
+
+        const endRegex = /\+==.*/g;
+        cleanedOperation = cleanedOperation.replace(endRegex, "");
 
         let output = eval(cleanedOperation);
         output = output + minutesToHours;
