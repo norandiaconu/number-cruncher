@@ -14,7 +14,7 @@
 chrome-profiler-events*.json
 
 # IDEs and editors
-/.idea
+android/.idea
 .project
 .classpath
 .c9/
@@ -40,7 +40,6 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-/android
 /resources/android/*/
 
 # System Files

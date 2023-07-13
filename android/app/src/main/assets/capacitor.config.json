@@ -1,0 +1,7 @@
+{
+	"appId": "com.norandiaconu.numbercruncher",
+	"appName": "Number Cruncher",
+	"webDir": "docs",
+	"bundledWebRuntime": false,
+	"backgroundColor": "#000000"
+}
