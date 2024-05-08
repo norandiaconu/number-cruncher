@@ -1,13 +1,13 @@
-import { CapacitorConfig } from "@capacitor/cli";
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: "com.norandiaconu.numbercruncher",
-  appName: "Number Cruncher",
-  webDir: "docs",
+  appId: 'com.norandiaconu.numbercruncher',
+  appName: 'number-cruncher',
+  webDir: 'docs',
   server: {
-    androidScheme: "https",
+    androidScheme: 'https'
   },
-  backgroundColor: "#000000",
+  "backgroundColor": "#000000"
 };
 
 export default config;

@@ -1,6 +1,6 @@
 {
 	"appId": "com.norandiaconu.numbercruncher",
-	"appName": "Number Cruncher",
+	"appName": "number-cruncher",
 	"webDir": "docs",
 	"server": {
 		"androidScheme": "https"

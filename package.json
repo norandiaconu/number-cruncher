@@ -1,19 +1,18 @@
 {
   "name": "number-cruncher",
   "author": "Noran Diaconu",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "license": "MIT",
   "bin": {
     "number-cruncher": "index.js"
   },
   "scripts": {
     "ng": "ng",
-    "serve": "ng serve",
     "start": "start http://localhost:8080 && http-server ./docs -a localhost -p 8080",
     "build": "ng build",
     "watch": "ng build & http-server ./docs",
     "lint": "eslint .",
-    "test": "jest --coverage",
+    "test": "jest",
     "//electron": "echo 'electron scripts require global installation of electron-builder'",
     "electron": "electron-builder --win=dir",
     "electron-installer": "electron-builder --win=nsis-web",
@@ -45,7 +44,7 @@
     "@angular/cli": "^15.2.9",
     "@angular/compiler-cli": "^15.2.9",
     "@capacitor/android": "^5.2.3",
-    "@capacitor/assets": "^2.0.4",
+    "@capacitor/assets": "~3.0.5",
     "@capacitor/cli": "5.1.1",
     "@types/jest": "^28.1.3",
     "@types/node": "^18.11.9",
