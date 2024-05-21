@@ -8,16 +8,17 @@ import { catchError } from "rxjs/operators";
     styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-    @ViewChild("theText") theText!: ElementRef;
-    @ViewChild("theUrl") theUrl!: ElementRef;
-    title = "Number Cruncher";
-    total = 0.0;
-    crunchPlaceholder = "TestOne 1.1\nTestTwo 1.2";
-    urlPlaceholder = "Enter URL for txt file";
+    @ViewChild("theText", { static: true, read: ElementRef }) public theText!: ElementRef;
+    @ViewChild("theUrl", { static: true, read: ElementRef }) public theUrl!: ElementRef;
+    public title = "Number Cruncher";
+    public total = 0.0;
+    public average = 0.0;
+    public crunchPlaceholder = "TestOne 1.1\nTestTwo 1.2";
+    public urlPlaceholder = "Enter URL for txt file";
 
     constructor(private loadService: LoadService) {}
 
-    parse(textInput: string): void {
+    public parse(textInput: string): void {
         if (!textInput) {
             this.crunchPlaceholder =
                 "Please enter some text to parse before attempting to crunch\n\nExample below:\n\nTestOne 1.1\nTestTwo 1.2";
@@ -50,20 +51,23 @@ export class AppComponent {
         const endRegex = /\+==.*/g;
         cleanedOperation = cleanedOperation.replace(endRegex, "");
 
-        let output = eval(cleanedOperation);
-        output = output + minutesToHours;
-        this.total = output;
+        const output = eval(cleanedOperation);
+        this.total = output + minutesToHours;
+
+        const countItems = (cleanedOperation.match(/\+/g) || []).length + 1;
+        this.average = this.total / countItems;
     }
 
-    clearText(): void {
+    public clearText(): void {
         if (this.theText) {
             this.theText.nativeElement.value = "";
             this.theUrl.nativeElement.value = "";
         }
         this.total = 0;
+        this.average = 0;
     }
 
-    loadInput(urlInput: string | null): void {
+    public loadInput(urlInput: string | null): void {
         if (!urlInput) {
             this.urlPlaceholder = "Please enter a URL here before attempting to load";
             this.theUrl.nativeElement.focus();
@@ -76,7 +80,7 @@ export class AppComponent {
                     if (error.status === 404) {
                         this.crunchPlaceholder = "404 response: Please enter a valid url";
                     }
-                    console.log("1", error);
+                    console.log("error", error);
                     return "";
                 }),
             )
@@ -87,7 +91,7 @@ export class AppComponent {
             });
     }
 
-    loadPrevious(): void {
+    public loadPrevious(): void {
         const previousUrl = localStorage.getItem("url");
         this.theUrl.nativeElement.value = previousUrl;
         this.loadInput(previousUrl);

@@ -1,4 +1,4 @@
-package com.norandiaconu.numbercruncher;
+package com.norandiaconu.textparser;
 
 import com.getcapacitor.BridgeActivity;
 

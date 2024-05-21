@@ -3,7 +3,8 @@
   "ignorePatterns": [
     "docs/",
     "android/",
-    "index.js"
+    "index.js",
+    "coverage/"
   ],
   "overrides": [
     {

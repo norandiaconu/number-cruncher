@@ -2,6 +2,7 @@
 <textarea rows="10" cols="50" placeholder="{{ crunchPlaceholder }}" #theText></textarea>
 <br />
 <h2>Total: {{ total | number: ".1-1" }}</h2>
+<h2>Average: {{ average | number: ".1-1" }}</h2>
 <br />
 <button (click)="parse(theText.value)"><b>CRUNCH</b></button>
 <button (click)="clearText()"><b>CLEAR</b></button>
