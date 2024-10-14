@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { LoadService } from './load.service';
 import { catchError } from 'rxjs/operators';
+import { HttpErrorResponse } from '@angular/common/http';
+import { evaluate } from 'mathjs';
 
 @Component({
     selector: 'app-root',
@@ -51,7 +53,7 @@ export class AppComponent {
         const endRegex = /\+==.*/g;
         cleanedOperation = cleanedOperation.replace(endRegex, '');
 
-        const output = eval(cleanedOperation);
+        const output = evaluate(cleanedOperation) as number;
         this.total = output + minutesToHours;
 
         const countItems = (cleanedOperation.match(/\+/g) || []).length + 1;
@@ -76,7 +78,7 @@ export class AppComponent {
         this.loadService
             .getTxtFile(urlInput)
             .pipe(
-                catchError((error) => {
+                catchError((error: HttpErrorResponse) => {
                     if (error.status === 404) {
                         this.crunchPlaceholder = '404 response: Please enter a valid url';
                     }

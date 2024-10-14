@@ -1,9 +1,0 @@
-{
-	"appId": "com.norandiaconu.numbercruncher",
-	"appName": "number-cruncher",
-	"webDir": "docs",
-	"server": {
-		"androidScheme": "https"
-	},
-	"backgroundColor": "#000000"
-}
