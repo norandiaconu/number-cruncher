@@ -1,7 +1,7 @@
 {
     "name": "number-cruncher",
     "author": "Noran Diaconu",
-    "version": "1.6.4",
+    "version": "1.6.5",
     "license": "MIT",
     "bin": {
         "number-cruncher": "index.js"

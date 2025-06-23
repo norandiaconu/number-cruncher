@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
 export class LoadService {
-    constructor(private http: HttpClient) {}
+    private http = inject(HttpClient);
+
 
     getTxtFile(urlInput: string): Observable<string> {
         return this.http.get(urlInput, { responseType: 'text' });

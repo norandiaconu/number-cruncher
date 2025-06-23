@@ -1,13 +1,16 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { LoadService } from './load.service';
 import { catchError } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
 import { evaluate } from 'mathjs';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    standalone: true,
+    imports: [DecimalPipe]
 })
 export class AppComponent {
     @ViewChild('theText', { static: true, read: ElementRef }) public theText!: ElementRef<HTMLInputElement>;
@@ -18,7 +21,7 @@ export class AppComponent {
     public crunchPlaceholder = 'TestOne 1.1\nTestTwo 1.2';
     public urlPlaceholder = 'Enter URL for txt file';
 
-    constructor(private loadService: LoadService) {}
+    private loadService = inject(LoadService);
 
     public parse(textInput: string): void {
         if (!textInput) {

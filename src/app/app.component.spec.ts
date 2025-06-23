@@ -1,7 +1,7 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { LoadService } from './load.service';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
@@ -9,9 +9,8 @@ describe('AppComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [AppComponent],
-            providers: [LoadService],
-            imports: [HttpClientTestingModule]
+            providers: [LoadService, provideHttpClient()],
+            imports: [AppComponent]
         }).compileComponents();
 
         fixture = TestBed.createComponent(AppComponent);
