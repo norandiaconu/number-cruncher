@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
 import { LoadService } from './load.service';
 import { catchError } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -12,8 +12,8 @@ import { DecimalPipe } from '@angular/common';
     imports: [DecimalPipe]
 })
 export class AppComponent {
-    @ViewChild('theText', { static: true, read: ElementRef }) public theText!: ElementRef<HTMLInputElement>;
-    @ViewChild('theUrl', { static: true, read: ElementRef }) public theUrl!: ElementRef<HTMLInputElement>;
+    public readonly theText = viewChild.required<ElementRef<HTMLInputElement>>('theText');
+    public readonly theUrl = viewChild.required<ElementRef<HTMLInputElement>>('theUrl');
     public title = 'Number Cruncher';
     public total = 0.0;
     public average = 0.0;
@@ -26,7 +26,7 @@ export class AppComponent {
         if (!textInput) {
             this.crunchPlaceholder =
                 'Please enter some text to parse before attempting to crunch\n\nExample below:\n\nTestOne 1.1\nTestTwo 1.2';
-            this.theText.nativeElement.focus();
+            this.theText().nativeElement.focus();
             return;
         }
         const initialRegex = /.* /g;
@@ -63,9 +63,10 @@ export class AppComponent {
     }
 
     public clearText(): void {
-        if (this.theText) {
-            this.theText.nativeElement.value = '';
-            this.theUrl.nativeElement.value = '';
+        const theText = this.theText();
+        if (theText) {
+            theText.nativeElement.value = '';
+            this.theUrl().nativeElement.value = '';
         }
         this.total = 0;
         this.average = 0;
@@ -74,7 +75,7 @@ export class AppComponent {
     public loadInput(urlInput: string): void {
         if (!urlInput) {
             this.urlPlaceholder = 'Please enter a URL here before attempting to load';
-            this.theUrl.nativeElement.focus();
+            this.theUrl().nativeElement.focus();
             return;
         }
         this.loadService
@@ -89,7 +90,7 @@ export class AppComponent {
                 })
             )
             .subscribe((loadedText) => {
-                this.theText.nativeElement.value = loadedText;
+                this.theText().nativeElement.value = loadedText;
                 this.parse(loadedText);
                 localStorage.setItem('url', urlInput);
             });
@@ -98,7 +99,7 @@ export class AppComponent {
     public loadPrevious(): void {
         const previousUrl = localStorage.getItem('url');
         if (previousUrl) {
-            this.theUrl.nativeElement.value = previousUrl;
+            this.theUrl().nativeElement.value = previousUrl;
             this.loadInput(previousUrl);
         }
     }
