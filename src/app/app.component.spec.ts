@@ -18,43 +18,43 @@ describe('AppComponent', () => {
     });
 
     it('should check the title', () => {
-        expect(app.title).toBe('Number Cruncher');
+        expect(app['title']).toBe('number-cruncher');
     });
 
     it('should check initial total/average', () => {
-        expect(app.total).toBe(0.0);
-        expect(app.average).toBe(0.0);
+        expect(app['total']).toBe(0.0);
+        expect(app['average']).toBe(0.0);
     });
 
     it('should check that the total/average is reset to 0.0', () => {
-        app.total = 1;
-        app.average = 1;
-        app.clearText();
-        expect(app.total).toBe(0);
-        expect(app.average).toBe(0);
+        app['total'] = 1;
+        app['average'] = 1;
+        app['clearText']();
+        expect(app['total']).toBe(0);
+        expect(app['average']).toBe(0);
     });
 
     it('should ensure parsing occurs properly for decimals', () => {
-        app.parse('test1 1.1\ntest2 1.2');
-        expect(app.total).toBe(2.3);
-        expect(app.average).toBe(1.15);
+        app['parse']('test1 1.1\ntest2 1.2');
+        expect(app['total']).toBe(2.3);
+        expect(app['average']).toBe(1.15);
     });
 
     it('should ensure parsing occurs properly for h:mm format', () => {
-        app.parse('test 1 1:06\ntest 2 1:12');
-        expect(app.total).toBe(2.3);
-        expect(app.average).toBe(1.15);
+        app['parse']('test 1 1:06\ntest 2 1:12');
+        expect(app['total']).toBe(2.3);
+        expect(app['average']).toBe(1.15);
     });
 
     it('should handle parsing empty text', () => {
-        app.parse('');
-        expect(app.total).toBe(0);
-        expect(app.average).toBe(0);
+        app['parse']('');
+        expect(app['total']).toBe(0);
+        expect(app['average']).toBe(0);
     });
 
     it('should handle loading empty url', () => {
-        app.loadInput('');
-        expect(app.total).toBe(0);
-        expect(app.average).toBe(0);
+        app['loadInput']('');
+        expect(app['total']).toBe(0);
+        expect(app['average']).toBe(0);
     });
 });

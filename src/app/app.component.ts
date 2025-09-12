@@ -12,17 +12,17 @@ import { DecimalPipe } from '@angular/common';
     imports: [DecimalPipe]
 })
 export class AppComponent {
-    public readonly theText = viewChild.required<ElementRef<HTMLInputElement>>('theText');
-    public readonly theUrl = viewChild.required<ElementRef<HTMLInputElement>>('theUrl');
-    public title = 'Number Cruncher';
-    public total = 0.0;
-    public average = 0.0;
-    public crunchPlaceholder = 'TestOne 1.1\nTestTwo 1.2';
-    public urlPlaceholder = 'Enter URL for txt file';
+    protected title = 'number-cruncher';
+    protected total = 0.0;
+    protected average = 0.0;
+    protected crunchPlaceholder = 'TestOne 1.1\nTestTwo 1.2';
+    protected urlPlaceholder = 'Enter URL for txt file';
 
+    private readonly theText = viewChild.required<ElementRef<HTMLInputElement>>('theText');
+    private readonly theUrl = viewChild.required<ElementRef<HTMLInputElement>>('theUrl');
     private loadService = inject(LoadService);
 
-    public parse(textInput: string): void {
+    protected parse(textInput: string): void {
         if (!textInput) {
             this.crunchPlaceholder =
                 'Please enter some text to parse before attempting to crunch\n\nExample below:\n\nTestOne 1.1\nTestTwo 1.2';
@@ -62,7 +62,7 @@ export class AppComponent {
         this.average = this.total / countItems;
     }
 
-    public clearText(): void {
+    protected clearText(): void {
         const theText = this.theText();
         if (theText) {
             theText.nativeElement.value = '';
@@ -72,7 +72,7 @@ export class AppComponent {
         this.average = 0;
     }
 
-    public loadInput(urlInput: string): void {
+    protected loadInput(urlInput: string): void {
         if (!urlInput) {
             this.urlPlaceholder = 'Please enter a URL here before attempting to load';
             this.theUrl().nativeElement.focus();
@@ -96,7 +96,7 @@ export class AppComponent {
             });
     }
 
-    public loadPrevious(): void {
+    protected loadPrevious(): void {
         const previousUrl = localStorage.getItem('url');
         if (previousUrl) {
             this.theUrl().nativeElement.value = previousUrl;

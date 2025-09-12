@@ -1,7 +1,7 @@
 {
     "name": "number-cruncher",
     "author": "Noran Diaconu",
-    "version": "1.6.8",
+    "version": "1.6.9",
     "license": "MIT",
     "bin": {
         "number-cruncher": "index.js"
@@ -23,8 +23,8 @@
         "zone.js": "~0.15.1"
     },
     "devDependencies": {
-        "@angular/build": "^19.2.15",
-        "@angular/cli": "^19.2.15",
+        "@angular/build": "^19.2.16",
+        "@angular/cli": "^19.2.16",
         "@angular/compiler-cli": "^19.2.14",
         "@types/jest": "~29.5.4",
         "@typescript-eslint/eslint-plugin": "~7.18.0",

@@ -6,8 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 export class LoadService {
     private http = inject(HttpClient);
 
-
-    getTxtFile(urlInput: string): Observable<string> {
+    public getTxtFile(urlInput: string): Observable<string> {
         return this.http.get(urlInput, { responseType: 'text' });
     }
 }
