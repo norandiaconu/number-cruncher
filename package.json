@@ -1,7 +1,7 @@
 {
     "name": "number-cruncher",
     "author": "Noran Diaconu",
-    "version": "1.6.9",
+    "version": "1.6.10",
     "license": "MIT",
     "bin": {
         "number-cruncher": "index.js"
@@ -13,29 +13,29 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@angular/common": "^19.2.14",
-        "@angular/compiler": "^19.2.14",
-        "@angular/core": "^19.2.14",
-        "@angular/platform-browser": "^19.2.14",
-        "@angular/platform-browser-dynamic": "~19.2.14",
+        "@angular/common": "^20.3.16",
+        "@angular/compiler": "^20.3.16",
+        "@angular/core": "^20.3.16",
+        "@angular/platform-browser": "^20.3.16",
+        "@angular/platform-browser-dynamic": "~20.3.16",
         "mathjs": "~14.6.0",
         "rxjs": "~6.6.0",
         "zone.js": "~0.15.1"
     },
     "devDependencies": {
-        "@angular/build": "^19.2.16",
-        "@angular/cli": "^19.2.16",
-        "@angular/compiler-cli": "^19.2.14",
+        "@angular-eslint/eslint-plugin": "~20.7.0",
+        "@angular/build": "^20.3.15",
+        "@angular/cli": "^20.3.15",
+        "@angular/compiler-cli": "^20.3.16",
         "@types/jest": "~29.5.4",
         "@typescript-eslint/eslint-plugin": "~7.18.0",
         "@typescript-eslint/eslint-plugin-tslint": "~7.0.2",
         "@typescript-eslint/parser": "~7.18.0",
-        "angular-eslint": "~19.8.1",
         "eslint": "^8.57.0",
         "eslint-plugin-import": "~2.29.1",
         "jest": "~29.7.0",
         "jest-preset-angular": "~14.6.1",
-        "typescript": "~5.5.4"
+        "typescript": "~5.9.3"
     },
     "keywords": [
         "number",

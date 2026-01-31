@@ -20,7 +20,7 @@ export class AppComponent {
 
     private readonly theText = viewChild.required<ElementRef<HTMLInputElement>>('theText');
     private readonly theUrl = viewChild.required<ElementRef<HTMLInputElement>>('theUrl');
-    private loadService = inject(LoadService);
+    private readonly loadService = inject(LoadService);
 
     protected parse(textInput: string): void {
         if (!textInput) {
