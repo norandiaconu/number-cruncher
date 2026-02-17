@@ -1,4 +1,4 @@
-import { enableProdMode, importProvidersFrom } from '@angular/core';
+import { enableProdMode, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { environment } from './environments/environment';
 import { LoadService } from './app/load.service';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -10,5 +10,5 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-    providers: [importProvidersFrom(BrowserModule), LoadService, provideHttpClient(withInterceptorsFromDi())]
+    providers: [provideZoneChangeDetection(),importProvidersFrom(BrowserModule), LoadService, provideHttpClient(withInterceptorsFromDi())]
 }).catch((err) => console.error(err));
