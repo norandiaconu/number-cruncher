@@ -1,7 +1,7 @@
 {
     "name": "number-cruncher",
     "author": "Noran Diaconu",
-    "version": "1.6.12",
+    "version": "1.6.13",
     "license": "MIT",
     "bin": {
         "number-cruncher": "index.js"
@@ -13,20 +13,20 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@angular/common": "^21.1.4",
-        "@angular/compiler": "^21.1.4",
-        "@angular/core": "^21.1.4",
-        "@angular/platform-browser": "^21.1.4",
-        "@angular/platform-browser-dynamic": "~21.1.4",
+        "@angular/common": "^21.2.6",
+        "@angular/compiler": "^21.2.6",
+        "@angular/core": "^21.2.6",
+        "@angular/platform-browser": "^21.2.6",
+        "@angular/platform-browser-dynamic": "~21.2.6",
         "mathjs": "~14.6.0",
         "rxjs": "~7.8.2",
         "zone.js": "~0.15.1"
     },
     "devDependencies": {
         "@angular-eslint/eslint-plugin": "~21.2.0",
-        "@angular/build": "^21.1.4",
-        "@angular/cli": "^21.1.4",
-        "@angular/compiler-cli": "^21.1.4",
+        "@angular/build": "^21.2.5",
+        "@angular/cli": "^21.2.5",
+        "@angular/compiler-cli": "^21.2.6",
         "@typescript-eslint/eslint-plugin": "~7.18.0",
         "@typescript-eslint/eslint-plugin-tslint": "~7.0.2",
         "@typescript-eslint/parser": "~7.18.0",
