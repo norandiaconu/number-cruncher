@@ -12,7 +12,7 @@ https://github.com/typescript-eslint/tslint-to-eslint-config/blob/master/docs/FA
 Happy linting! 💖
 */
 module.exports = {
-    ignorePatterns: ["coverage/", "docs/", "environments/", ".eslintrc.js", "index.js", "jest.config.js", "main.ts", "setup-jest.ts"],
+    ignorePatterns: ["coverage/", "docs/", "environments/", ".eslintrc.js", "index.js", "main.ts"],
     env: {
         browser: true,
         es6: true,
