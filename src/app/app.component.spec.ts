@@ -1,7 +1,8 @@
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { describe, beforeEach, it, expect } from 'vitest';
 import { AppComponent } from './app.component';
 import { LoadService } from './load.service';
-import { provideHttpClient } from '@angular/common/http';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;

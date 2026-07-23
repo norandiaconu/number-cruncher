@@ -1,9 +1,9 @@
-import { Component, ElementRef, inject, viewChild } from '@angular/core';
-import { LoadService } from './load.service';
-import { catchError } from 'rxjs/operators';
-import { HttpErrorResponse } from '@angular/common/http';
-import { evaluate } from 'mathjs';
 import { DecimalPipe } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { evaluate } from 'mathjs';
+import { catchError } from 'rxjs/operators';
+import { LoadService } from './load.service';
 
 @Component({
     selector: 'app-root',
