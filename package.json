@@ -1,7 +1,7 @@
 {
     "name": "number-cruncher",
     "author": "Noran Diaconu",
-    "version": "1.6.15",
+    "version": "1.6.16",
     "license": "MIT",
     "bin": {
         "number-cruncher": "index.js"
@@ -13,26 +13,26 @@
         "lint": "eslint ."
     },
     "dependencies": {
-        "@angular/common": "^21.2.6",
-        "@angular/compiler": "^21.2.6",
-        "@angular/core": "^21.2.6",
-        "@angular/platform-browser": "^21.2.6",
-        "@angular/platform-browser-dynamic": "~21.2.6",
+        "@angular/common": "^21.2.26",
+        "@angular/compiler": "^21.2.26",
+        "@angular/core": "^21.2.26",
+        "@angular/platform-browser": "^21.2.26",
+        "@angular/platform-browser-dynamic": "~21.2.26",
         "mathjs": "~14.6.0",
         "rxjs": "~7.8.2"
     },
     "type": "module",
     "devDependencies": {
-        "@angular/build": "^21.2.5",
-        "@angular/cli": "^21.2.5",
-        "@angular/compiler-cli": "^21.2.6",
+        "@angular/build": "^21.2.30",
+        "@angular/cli": "^21.2.30",
+        "@angular/compiler-cli": "^21.2.26",
         "angular-eslint": "~21.3.1",
         "eslint": "~9.39.4",
         "eslint-plugin-import": "~2.32.0",
         "jsdom": "~28.1.0",
         "prettier": "~3.8.1",
         "typescript": "~5.9.3",
-        "vitest": "~4.0.18"
+        "vitest": "~4.1.12"
     },
     "keywords": [
         "number",
